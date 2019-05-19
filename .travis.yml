@@ -1,5 +1,13 @@
 language: go
-go: 1.10.1
+go: 
+  - "1.10"
+branchs:
+  only:
+  - master
+  - dev
+install:
+  - go get -u github.com/scottkiss/blackfriday
+  - go get -u github.com/scottkiss/go-gypsy/yaml
 script:
 - go run main.go
 addons:
