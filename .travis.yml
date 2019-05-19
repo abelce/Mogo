@@ -1,4 +1,11 @@
 language: go
 go: 1.10.1
-script:
-  - go run main.go
+# script:
+#   - go run main.go
+branchs: 
+  only
+    - master
+    - dev
+after_success:
+  - chmod 600 ~/.ssh/id_rsa
+  - ssh root@111.231.192.70 -o  StrictHostKeyChecking=no 'cd /go/src/github.com/abelce/mogo && git pull && go run mogo.go'
