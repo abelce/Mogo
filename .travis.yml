@@ -5,12 +5,12 @@ branchs:
   only:
   - master
   - dev
-# install:
-#   - go get -u github.com/scottkiss/blackfriday
-#   - go get -u github.com/scottkiss/go-gypsy/yaml
-script:
-  - sudo mkdir -p /data/static/blog/
-  - go run main.go
+install:
+  - go get -u github.com/scottkiss/blackfriday
+  - go get -u github.com/scottkiss/go-gypsy/yaml
+# script:
+  # - sudo mkdir -p /data/static/blog/
+  # - go run main.go
 # addons:
 #   ssh_known_hosts:
 #   - 111.231.192.70
