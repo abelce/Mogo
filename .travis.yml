@@ -9,7 +9,8 @@ branchs:
 #   - go get -u github.com/scottkiss/blackfriday
 #   - go get -u github.com/scottkiss/go-gypsy/yaml
 script:
-- go run main.go
+  - ls -al
+  - go run main.go
 # addons:
 #   ssh_known_hosts:
 #   - 111.231.192.70
