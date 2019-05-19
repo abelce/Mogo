@@ -9,7 +9,7 @@ branchs:
 #   - go get -u github.com/scottkiss/blackfriday
 #   - go get -u github.com/scottkiss/go-gypsy/yaml
 script:
-  - mkdir /data/static/blog/
+  - mkdir -p /data/static/blog/
   - go run main.go
 # addons:
 #   ssh_known_hosts:
