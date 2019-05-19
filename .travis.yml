@@ -1,7 +1,7 @@
 language: go
 go: 1.10.1
 script:
-- go run main.go`
+- go run main.go
 addons:
   ssh_known_hosts:
   - 111.231.192.70
