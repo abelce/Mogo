@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/ablece/mogo/mogo"
+	"github.com/abelce/mogo/mogo"
 )
 
 /*
