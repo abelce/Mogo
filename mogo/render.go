@@ -13,7 +13,6 @@ package mogo
 
 import (
 	"bufio"
-	"fmt"
 	"html"
 	"html/template"
 	"io"
@@ -42,7 +41,7 @@ var (
 
 const (
 	POST_DIR     = "posts"
-	PUBLICSH_DIR = "public"
+	PUBLICSH_DIR = "/data/static/blog/public"
 )
 
 const (
@@ -203,10 +202,7 @@ func generateNavBar(yamls map[string]interface{}) {
 
 		nav := NavConfig{name, href, target}
 		navBarList = append(navBarList, nav)
-		fmt.Println(navBarList)
-
 	}
-	//log.Println(navBarList)
 }
 
 func processArticleFile(filePath, fileName string) (string, ArticleConfig, error) {

@@ -41,6 +41,24 @@ func Build() {
 	log.Println("blog process ok！")
 }
 
+// func New(websitPath string) {
+// 	if !isExists(PUBLICSH_DIR) {
+// 		err := os.Mkdir(PUBLICSH_DIR, 0777)
+// 		if err != nil {
+// 			log.Panic("create publish dir error -- " + err.Error())
+// 		}
+// 	}
+// 	rf := new(RenderFactory)
+// 	rf.Render(RENDER_DIR)
+
+// 	//copy res
+// 	err := copyDir(RENDER_DIR+"/assets", PUBLICSH_DIR+"/assets")
+// 	if err != nil {
+// 		log.Println(err)
+// 	}
+// 	log.Println("blog process ok！")
+// }
+
 func copyFile(src, dst string) (w int64, err error) {
 	f, err := os.Open(src)
 	if err != nil {

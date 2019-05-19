@@ -6,6 +6,7 @@
  		</p>
  		</div>  
  	</div>
+	<script type="text/javascript" src="/assets/themes/{{"theme"|get}}/plugin/prettify/prettify.js"></script>
  </body>
  </html>
 {{end}}
