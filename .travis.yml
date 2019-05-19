@@ -8,4 +8,4 @@ before_install:
   - chmod 700 ~/.ssh/id_rsa
   - echo -e "Host 111.231.192.70\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
-  - ssh root@111.231.192.70 -p tzx301214 'cd /go/src/github.com/abelce/mogo && git pull && go run mogo.go'
+  - ssh root@111.231.192.70 'cd /go/src/github.com/abelce/mogo && git pull && go run mogo.go'
