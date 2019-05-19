@@ -1,13 +1,14 @@
 language: go
 go: 1.10.1
 script:
-- go run main.go`
+- go run main.go
 addons:
   ssh_known_hosts:
   - 111.231.192.70
-before_install:
-  - openssl aes-256-cbc -K $encrypted_2fac2350cd4f_key -iv $encrypted_2fac2350cd4f_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
 after_success:
-  - chmod 600 ~/.ssh/id_rsa
-  - ssh root@111.231.192.70 -o  StrictHostKeyChecking=no 'cd /go/src/github.com/abelce/mogo && git pull && go run mogo.go'
+- chmod 600 ~/.ssh/id_rsa
+- ssh root@111.231.192.70 -o  StrictHostKeyChecking=no 'cd /go/src/github.com/abelce/mogo
+  && git pull && go run mogo.go'
+before_install:
+- openssl aes-256-cbc -K $encrypted_2fac2350cd4f_key -iv $encrypted_2fac2350cd4f_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
