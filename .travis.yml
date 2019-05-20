@@ -8,4 +8,4 @@ before_install:
    -in id_rsa.enc -out ~/.ssh/id_rsa -d
 after_success:
   - chmod 600 ~/.ssh/id_rsa
-  - ssh root@111.231.192.60 -o StrictHostKeyChecking=no 'cd /go/src/github.com/abelce/mogo && git pull && go run mogo.go'
+  - ssh root@111.231.192.70 -o StrictHostKeyChecking=no 'cd /go/src/github.com/abelce/mogo && git pull && go run mogo.go'
